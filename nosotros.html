@@ -1,259 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">    <link rel="stylesheet" href="contacto.css">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Cataleya</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-
-    <!-- logo -->
-    <a class="navbar-brand" href="index.html">Cataleya</a>
-
-    <!-- hamburguesa -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <form class="d-flex" role="search">
-          <input class="form-control me-2" type="Search" placeholder="Buscar">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-
-    <!-- contenedor flex para menú + buscador + botones -->
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
-
-      <!-- menu -->
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="catalogo.html" data-bs-toggle="dropdown">Catalogo</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="catalogo.html">Cumpleaños</a></li>
-            <li><a class="dropdown-item" href="catalogo.html">Graduaciones</a></li>
-            <li><a class="dropdown-item" href="catalogo.html">Eventos especiales</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
-
-      <!-- sign y login -->
-      <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-light" id="cart" >
-            <span class="material-symbols-outlined">
-         shopping_cart
-            </span>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">Cataleya</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
-                    <p id="datos-usuario" class="oculto"></p>
-                    <button class="btn btn-secondary shadow" class="oculto" id="btn-logout">
-                        Cerrar Sesión
-                    </button>
-                    <button class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#loginModal" id="btn-open-login">
-                        Iniciar Sesión
-                    </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="catalogo.html" data-bs-toggle="dropdown">Catálogo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalogo.html">Cumpleaños</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Graduaciones</a></li>
+                <li><a class="dropdown-item" href="catalogo.html">Eventos especiales</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero bg-light py-5 mt-5 text-center">
+    <div class="container">
+      <h1 class="fw-bold">Sobre Nosotros</h1>
+      <p class="lead">Flores eternas y detalles que inspiran recuerdos inolvidables</p>
     </div>
+  </section>
 
-  </div>
-</nav>
-  </header> 
-<main>
-        <!-- Misión, Visión, Valores -->
-    <section class="about py-5">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4 mb-4">
-            <h3>Misión</h3>
-            <p>Crear arreglos florales únicos y personalizados que generen momentos inolvidables.</p>
-            <img src="" alt="" class="img-fluid">
+  <!-- Misión, Visión, Valores -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <h3 class="fw-bold">Misión</h3>
+          <p>Crear arreglos florales únicos y personalizados que generen momentos inolvidables.</p>
+          
         </div>
-          <div class="col-md-4 mb-4">
-            <h3>Visión</h3>
-            <p>Ser reconocidos como referentes en creatividad y calidad en arreglos florales eternos.</p>
-            <img src="" alt="" class="img-fluid">
+        <div class="col-md-4">
+          <h3 class="fw-bold">Visión</h3>
+          <p>Ser reconocidos como referentes en creatividad y calidad en arreglos florales eternos.</p>
+          
         </div>
-          <div class="col-md-4 mb-4">
-            <h3>Valores</h3>
-            <p>Pasión, dedicación, calidad y atención a cada detalle en cada producto.</p>
-            <p>maferrrr</p>
-            <img src="" alt="" class="img-fluid">
-        </div>
+        <div class="col-md-4">
+          <h3 class="fw-bold">Valores</h3>
+          <p>Pasión, dedicación, calidad y atención a cada detalle en cada producto.</p>
+          
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- introduccion de nosotras -->
+  <section class="hero py-5 mt-5 text-center">
+    <div class="container">
+      <h1 class="fw-bold">te brindamos la confianza necesaria para pensar y contar con nosotros 
+                            en esos momentos especiales</h1>
+      <p class="lead">Regalar flores eternas es una forma de simbolizar amor y aprecio duraderos. Son un recuerdo atemporal de tus sentimientos. En nuestro negocio, aunque pequeño, cada pieza es creada con el corazón, lo que se 
+        refleja en las excelentes reseñas y la satisfacción de nuestros clientes.</p>
+    </div>
+  </section>
 
-    <!-- Equipo -->
-    <section class="about py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-5">Nuestro equipo</h2>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-3">
-            <div class="team-card">
-              <img src="" alt="Hilary" class="img-fluid">
-              <h5>Hilary</h5>
-              <p>Fundadora & Diseñadora principal</p>
-            </div>
+  <!-- Equipo -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Nuestro equipo</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="team-card text-center p-3 bg-white rounded shadow">
+            
+            <h5>Hilary</h5>
+            <p class="text-muted">Diseñadora principal</p>
           </div>
-          <div class="col-md-3">
-            <div class="team-card">
-              <img src="" alt="Ruth" class="img-fluid">
-              <h5>Ruth Ortiz</h5>
-              <p>Encargado de Producción</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="team-card">
-              <img src="" alt="" class="img-fluid">
-              <h5>Mafer Saenz</h5>
-              <p>Atención al Cliente</p>
-            </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-card text-center p-3 bg-white rounded shadow">
+            
+            <h5>Ruth Ortiz</h5>
+            <p class="text-muted">Encargado de Producción</p>
           </div>
         </div>
-      </div>
-    </section>
-
-        <section class="cta">
-      <div class="container">
-        <h2 class="fw-bold">¿Listo para sorprender con flores eternas?</h2>
-        <p>Haz tu pedido ahora y lleva un detalle que durará por siempre.</p>
-        <a href="contacto.html" class="btn btn-primary btn-lg">Contactar</a>
-      </div>
-    </section>
-
-</main>
-
-<footer class="bg-dark text-white pt-5 pb-3">
-  <div class="container">
-    <div class="row">
-
-      <!-- Logo y descripción -->
-      <div class="col-md-4 mb-4">
-        <h4 class="fw-bold sansita-regular">Cataleya</h4>
-        <p>Flores eternas y arreglos personalizados que hacen momentos inolvidables.</p>
-      </div>
-
-      <!-- Navegación rápida -->
-      <div class="col-md-2 mb-4">
-        <h5 class="fw-bold sansita-regular">Navegación</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
-          <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
-          <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
-          <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
-        </ul>
-      </div>
-
-      <!-- Servicios / características -->
-      <div class="col-md-3 mb-4">
-        <h5 class="fw-bold sansita-regular">Servicios</h5>
-        <ul class="list-unstyled">
-          <li>Personalizados</li>
-          <li>Materiales que duran</li>
-          <li>Entrega rápida</li>
-          <li>Detalles únicos</li>
-        </ul>
-      </div>
-
-      <!-- Contacto / redes sociales -->
-      <div class="col-md-3 mb-4">
-        <h5 class="fw-bold sansita-regular">Contáctanos</h5>
-        <p>Email: info@cataleya.com</p>
-        <p>Tel: +51 987 654 321</p>
-        <div class="d-flex gap-2">
+        <div class="col-md-3">
+          <div class="team-card text-center p-3 bg-white rounded shadow">
+            <h5>Mafer Saenz</h5>
+            <p class="text-muted">Atención al Cliente</p>
+          </div>
         </div>
       </div>
-
     </div>
+  </section>
 
-    <hr class="border-secondary">
-
-    <!-- Derechos -->
-    <div class="text-center small">
-      &copy; 2025 Cataleya. Todos los derechos reservados.
+  <!-- Call to Action -->
+  <section class="cta text-center text-white py-5" style="background: url('imgs/flores-banner.jpg') center/cover;">
+    <div class="container">
+      <h2 class="fw-bold">¿Listo para sorprender con flores eternas?</h2>
+      <p>Haz tu pedido ahora y lleva un detalle que durará por siempre.</p>
+      <a href="contacto.html" class="btn btn-light btn-lg">Contactar</a>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Modal de logueo -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="loginEmail" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="nombre@ejemplo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="loginPassword" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="********">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="btn-login">Ingresar</button>
-                    <button type="button" class="btn btn-link" id="btn-open-register">¿No tienes cuenta? Regístrate</button>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="fw-bold">Cataleya</h4>
+          <p>Flores eternas y arreglos personalizados que hacen momentos inolvidables.</p>
         </div>
-    </div>
-<!-- Modal de registro -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Registro de Usuario</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="registerName" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="registerName" placeholder="Tu nombre completo">
-                        </div>
-                        <div class="mb-3">
-                            <label for="registerEmail" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="registerEmail" placeholder="nombre@ejemplo.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="registerPassword" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="registerPassword" placeholder="********">
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="********">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn btn-secondary" id="btn-back-to-login">Regresar a Iniciar Sesión</button>
-                    <button type="button" class="btn btn-success" id="btn-register">Registrar</button>
-                </div>
-            </div>
+        <div class="col-md-2 mb-4">
+          <h5 class="fw-bold">Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+            <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
         </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Servicios</h5>
+          <ul class="list-unstyled">
+            <li>Personalizados</li>
+            <li>Materiales que duran</li>
+            <li>Entrega rápida</li>
+            <li>Detalles únicos</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Contáctanos</h5>
+          <p>Email: info@cataleya.com</p>
+          <p>Tel: +51 987 654 321</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="text-center small">&copy; 2025 Cataleya. Todos los derechos reservados.</div>
     </div>
+  </footer>
 
-
-   
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script src="js/registro.js"></script>
-    <script src="js/logueo.js"></script>
-    <script src="js/mostrarUsuarios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
