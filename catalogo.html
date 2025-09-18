@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo – Flower Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="catalogo.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+ <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+
+    <!-- logo -->
+    <a class="navbar-brand" href="index.html">Cataleya</a>
+
+    <!-- hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <form class="d-flex" role="search">
+          <input class="form-control me-2" type="Search" placeholder="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+
+    <!-- contenedor flex para menú + buscador + botones -->
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
+
+      <!-- menu -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="catalogo.html" data-bs-toggle="dropdown">Catalogo</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="catalogo.html">Cumpleaños</a></li>
+            <li><a class="dropdown-item" href="catalogo.html">Graduaciones</a></li>
+            <li><a class="dropdown-item" href="catalogo.html">Eventos especiales</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <!-- sign y login -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-light" id="cart" >
+            <span class="material-symbols-outlined">
+         shopping_cart
+            </span>
+        </button>
+
+                    <p id="datos-usuario" class="oculto"></p>
+                    <button class="btn btn-secondary shadow" class="oculto" id="btn-logout">
+                        Cerrar Sesión
+                    </button>
+                    <button class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#loginModal" id="btn-open-login">
+                        Iniciar Sesión
+                    </button>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- Barra lateral -->
+      <aside class="col-md-3 col-lg-2 bg-white border-end p-3">
+        <h2 class="h5">Filtros</h2>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Categoría</label>
+            <select class="form-select">
+              <option>Todos</option>
+              <option>Ramos</option>
+              <option>Arreglos</option>
+              <option>Cajas</option>
+            </select>
+          </div>
+
+              <label class="form-label">Calificación</label>
+          <select class="form-select">
+            <option>Seleccionar</option>
+            <option>⭐⭐⭐⭐⭐</option>
+            <option>⭐⭐⭐⭐</option>
+            <option>⭐⭐⭐</option>
+          </select>
+        
+          <div class="mb-3">
+            <label class="form-label">Precio máx.</label>
+            <input type="number" class="form-control" placeholder="Ej. 100">
+          </div>
+          <button class="btn btn-primary w-100">Aplicar</button>
+        </form>
+      </aside>
+
+      <!-- Catálogo -->
+      <main class="col-md-9 col-lg-10 p-3">
+        <header class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="h4">Catálogo</h1>
+          <div class="filters">
+            <button class="btn btn-outline-success btn-sm">Nuevo</button>
+            <button class="btn btn-outline-success btn-sm">Ascendente</button>
+            <button class="btn btn-outline-success btn-sm">Descendente</button>
+            <button class="btn btn-outline-success btn-sm">Destacados</button>
+          </div>
+        </header>
+
+        <section class="row g-4">
+          <!-- Producto 1 -->
+          <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://i.pinimg.com/736x/16/52/95/1652958b35993fda22f0ace2edc29fae.jpg" 
+                   class="card-img-top" alt="Ramo de rosas eternas">
+              <figcaption class="card-body">
+                <h2 class="h6">Ramo de Rosas Eternas</h2>
+                <p class="text-muted small">Flores hechas a mano con listones de seda.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto1">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Producto 2 -->
+          <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://i.pinimg.com/originals/13/16/d5/1316d5f222e382267bcea11176ec41a3.jpg" 
+                   class="card-img-top" alt="Caja floral artesanal">
+              <figcaption class="card-body">
+                <h2 class="h6">Caja Floral Artesanal</h2>
+                <p class="text-muted small">Diseño elegante con flores eternas en caja.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto2">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://i.pinimg.com/736x/63/6d/74/636d74e312d86732fa6d6d7fe69c9ee6.jpg" 
+                   class="card-img-top" alt="Centro de mesa floral">
+              <figcaption class="card-body">
+                <h2 class="h6">Centro de Mesa Floral</h2>
+                <p class="text-muted small">Ideal para decorar eventos y reuniones.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto3">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Productos extra -->
+                    <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://www.umamanualidades.com/wp-content/uploads/2017/06/decorando-con-flores-de-papel-1024x1024.webp" 
+                   class="card-img-top" alt="Ramo de rosas eternas">
+              <figcaption class="card-body">
+                <h2 class="h6">Ramo de Rosas Eternas</h2>
+                <p class="text-muted small">Flores hechas a mano con listones de seda.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto1">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://factoriadepapelarg.wordpress.com/wp-content/uploads/2020/07/floresdepapelfactoriadepapel-5.jpg" 
+                   class="card-img-top" alt="Caja floral artesanal">
+              <figcaption class="card-body">
+                <h2 class="h6">Caja Floral Artesanal</h2>
+                <p class="text-muted small">Diseño elegante con flores eternas en caja.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto2">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="col-sm-6 col-lg-4 text-center">
+            <figure class="card shadow-sm h-100">
+              <img src="https://www.sdpnoticias.com/resizer/v2/NKUEOZYDLFBRRPD72VEEKX6UUE.jpg?smart=true&auth=af9c77ed71766fba59c022479b41086dbfde50efd6160345c31c430cab576661&width=1440&height=810" 
+                   class="card-img-top" alt="Centro de mesa floral">
+              <figcaption class="card-body">
+                <h2 class="h6">Centro de Mesa Floral</h2>
+                <p class="text-muted small">Ideal para decorar eventos y reuniones.</p>
+                <button type="button" class="btn btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#producto3">
+                  Ver más
+                </button>
+              </figcaption>
+            </figure>
+          </article>
+
+        </section>
+    </div>
+  </div>
+        </main>
+
+<footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo y descripción -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold sansita-regular">Cataleya</h4>
+        <p>Flores eternas y arreglos personalizados que hacen momentos inolvidables.</p>
+      </div>
+
+      <!-- Navegación rápida -->
+      <div class="col-md-2 mb-4">
+        <h5 class="fw-bold sansita-regular">Navegación</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+          <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+          <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
+          <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Servicios / características -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold sansita-regular">Servicios</h5>
+        <ul class="list-unstyled">
+          <li>Personalizados</li>
+          <li>Materiales que duran</li>
+          <li>Entrega rápida</li>
+          <li>Detalles únicos</li>
+        </ul>
+      </div>
+
+      <!-- Contacto / redes sociales -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold sansita-regular">Contáctanos</h5>
+        <p>Email: info@cataleya.com</p>
+        <p>Tel: +51 987 654 321</p>
+        <div class="d-flex gap-2">
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Derechos -->
+    <div class="text-center small">
+      &copy; 2025 Cataleya. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- Modal de logueo -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="********">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btn-login">Ingresar</button>
+                    <button type="button" class="btn btn-link" id="btn-open-register">¿No tienes cuenta? Regístrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal de registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registro de Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Tu nombre completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="********">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="********">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" id="btn-back-to-login">Regresar a Iniciar Sesión</button>
+                    <button type="button" class="btn btn-success" id="btn-register">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="js/logueo.js"></script>
+    <script src="js/mostrarUsuarios.js"></script>
+</body>
+</html>

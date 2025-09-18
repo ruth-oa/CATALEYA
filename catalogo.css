@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+.sansita-regular {
+  font-family: "Sansita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.navbar-brand{
+    font-family:"Sansita";
+}
+
+body {
+    background-color: #FFFFFF;
+    box-sizing: 0;
+    padding-top: 60px;
+    
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #F0C36E !important;
+  border-color: #F0C36E !important;
+  color: #ffffff !important; /* texto negro */
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    border-color: #F5E7E7;
+    color: rgb(14, 13, 13);
+}
+
+.btn-secondary:hover {
+    background-color: hsl(300, 4%, 95%); 
+    border-color: hsl(0, 0%, 93%);
+    color: rgb(0, 0, 0);
+}
+
+.btn-primary:hover {
+  background-color: #e9b451 !important;
+  border-color: #e4c747  !important;
+}
+
+.btn-light {
+  background-color: #e9b45100 !important;
+  border-color:#f8f8f800  !important;
+
+}
+
+
+.btn-outline-success:hover {
+  background-color: #e9b451 !important;
+  border-color: #e4c747  !important;
+}
+
+.btn-outline-success {
+  background-color: #f8f8f800 !important;
+  border-color: #e9b451  !important;
+  color: #e9b451;
+}
+
+.bg-body-tertiary {
+  background-color: #F5E7E7 !important; /* tu color */
+}
+
+#cart {
+    size: 50px;
+}
+
+.btn-dark {  
+     background-color: #a08a8a !important;
+     border-color: #927b7b !important;
+}
+
