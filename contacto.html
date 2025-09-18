@@ -73,7 +73,7 @@
   <div class="row g-4">
     
     <!-- Columna formulario -->
-    <div class="col-md-6">
+    <div class="col-md-6 pedidoForm">
        <form id="pedidoForm" class="p-4 rounded shadow" style="background:#fff; border:2px solid #F5E7E7;">
         
         <!-- Nombre -->
@@ -160,7 +160,7 @@
 <div class="modal fade" id="pedidoPersonalizadoModal" tabindex="-1" aria-labelledby="pedidoPersonalizadoLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <form id="pedidoPersonalizadoForm">
+      <form id="pedidoForm p-4 rounded shadow">
         <div class="modal-header">
           <h5 class="modal-title" id="pedidoPersonalizadoLabel">Pedido Personalizado ✨</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -269,6 +269,7 @@
   </div>
 </footer>
 
+
 <!-- Modal de logueo -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -290,8 +291,7 @@
                     </form>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="btn-login">Ingresar</button>
+                      <button type="button" class="btn btn-primary" id="btn-login">Ingresar</button>
                     <button type="button" class="btn btn-link" id="btn-open-register">¿No tienes cuenta? Regístrate</button>
                 </div>
             </div>

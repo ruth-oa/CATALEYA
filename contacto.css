@@ -24,9 +24,21 @@ button {
 }
 
 .btn-primary {
-  background-color: #F0C36E !important;
-  border-color: #F0C36E !important;
-  color: #ffffff !important; /* texto negro */
+  background: linear-gradient(135deg, #f1ac2a, #e69a00);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  background: linear-gradient(135deg, #d38b05, #e69a00);
+  box-shadow: 0 5px 15px rgba(230,154,0,0.4);
 }
 
 .btn-secondary {
@@ -42,9 +54,22 @@ button {
 }
 
 .btn-success {
-  background-color: #ec739b !important;
-  border-color: #e264aa !important;
-  color: #ffffff !important; /* texto negro */
+  background: linear-gradient(135deg, #e9d8e0, #ffe8ef);
+  color: #ba2655;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #ee58a3, #ba2655);
+  box-shadow: 0 5px 15px rgba(230,154,0,0.4);
+  border: none;
 }
 
 .btn-primary:hover {
@@ -134,3 +159,154 @@ input[type=submit]:hover {
     transform: translateY(-2px);
 }
 
+#pedidoForm {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Animación coquette al pasar el mouse */
+.pedidoForm:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(236, 115, 155, 0.35);
+  transition: transform 0.2s ease-in-out;
+}
+
+#pedidoForm::before {
+  top: -14px;
+  left: 18px;
+}
+
+#pedidoForm::after {
+  bottom: -14px;
+  right: 18px;
+}
+
+.pedidoForm {
+    background: repeating-linear-gradient(
+    45deg,             /* ángulo de las líneas */
+    #fcbec2,           /* fucsia */
+    #ff69b4 5px,       /* grosor línea fucsia */
+    #faf5f7 2px,       /* rosa clarísimo */
+    #ffe6f0 10px       /* espacio entre líneas */
+  );
+}
+
+  /* === ESTILO PRO MODALES LOGIN & REGISTER === */
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  padding: 25px 20px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-header {
+  position: relative;
+  justify-content: center; /* centra el contenido principal */
+  padding: 1.5rem 2rem; /* más espacio arriba/abajo y laterales */
+  border-bottom: none; /* opcional: quita la línea */
+}
+
+.modal-header .modal-title {
+  margin: 0 auto; /* asegura que quede centrado */
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000; /* dale color llamativo */
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-header .btn-close:hover {
+  background-color: #e8dcdc;
+  opacity: 1;
+}
+
+
+
+.modal-title {
+  font-family: "Sansita", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f1ac2a;
+  text-align: center;
+}
+
+.modal-body form {
+  margin-top: 10px;
+}
+
+.modal-body label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.modal-body .form-control {
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-body .form-control:focus {
+  border-color: #f1ac2a;
+  box-shadow: 0 0 6px rgba(241,172,42,0.6);
+}
+
+.modal-footer {
+  border-top: none;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.modal-footer .btn-primary,
+.modal-footer .btn-success {
+  background: linear-gradient(135deg, #f1ac2a, #e69a00);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.modal-footer .btn-primary:hover,
+.modal-footer .btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230,154,0,0.4);
+}
+
+.modal-footer .btn-secondary {
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.modal-footer .btn-link {
+  color: #f55d5d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-footer .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9);}
+  to   { opacity: 1; transform: scale(1);}
+}
