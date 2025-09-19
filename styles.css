@@ -172,7 +172,7 @@ body {
 }
 
 /* Ajustes en pantallas chicas */
-@media (max-width: 768px) {
+@media (max-width: 948px) {
   .features {
     padding-top: 0rem !important;
     padding-bottom: 0rem !important;
