@@ -19,8 +19,8 @@ body {
     background-color: #FFFFFF;
     box-sizing: 0;
     padding-top: 15px;
-
-    
+    max-width: 100%;
+    overflow-x: hidden; /* corta cualquier cosa que se salga */
 }
 
 .btn-primary,
@@ -85,42 +85,133 @@ body {
 #cart {
     size: 50px;
 }
-.carousel-inner{
-    height: 50vh;
-    width: 100%;
-    
+
+.carousel-inner {
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;   /* ocupa todo el alto del slide */
+  object-fit: cover; /* recorta y ajusta la imagen para no dejar huecos */
+}
+  
+
+.carousel-caption {
+  position: absolute;
+}
+
+.custom-caption {
+  top: 50%;             
+  left: 10%;             
+  transform: translateY(-50%); 
+  text-align: left;      
+  padding: 15px 20px;
+  border-radius: 10px;
+  
+}
+
+.custom-caption p {
+  color: #000;
+  font-size: clamp(0.7rem, 1.8vw, 1.2rem); 
+  /* min más pequeño (0.7rem), escala con viewport, máx un poco menos */
+}
+
+.custom-caption h2 {
+    color: #000;
+  font-size: clamp(1rem, 2.5vw, 1.8rem); 
+  /* título también más compacto en pantallas chicas */
 }
 
 
-.carousel-item img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+.custom-caption .btn {
+  background: linear-gradient(135deg, #f1ac2a, #e69a00);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
 
-.carousel-caption {
-      right: 2rem;
-      left: auto;
-      bottom: 2rem;
-      text-align: right;
-    }
+.custom-caption .btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(230,154,0,0.4);
+}
 
 
 .features {
-      background: #fad1d1;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-    }
+  background: #fffaf5;
+  padding-top: 3rem;  /* desktop por defecto */
+  padding-bottom: 3rem;
+}
+
+.feature-box {
+  padding: 15px;
+}
+
+.feature-box i {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #e69a00;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feature-box h3 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.feature-box p {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #555;
+  margin: 0;
+}
+
+/* Ajustes en pantallas chicas */
+@media (max-width: 768px) {
+  .features {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .feature-box i {
+    font-size: 1.8rem;
+  }
+  .feature-box h3 {
+    font-size: 0.5rem;
+  }
+  .feature-box p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Muy chico (celulares) */
+@media (max-width: 576px) {
+  .features {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .feature-box i {
+    font-size: 0.8rem;
+  }
+  .feature-box h3 {
+    font-size: 0.2rem;
+  }
+  .feature-box p {
+    display: none; /* desaparece en celular */
+  }
+}
+
+
+
 
 .caracteristicas {
-      background-color: #fad1d1;
-      text-align: center;
-      flex: 1;
-      padding: 1rem 0.5rem;
-      margin: 0; 
-      padding-top: 18px;
-    }
+  flex: 1 1 200px;       /* cada tarjeta ocupa min 200px, luego se adapta */
+  max-width: 250px;      /* opcional, evita que se ensanche mucho */
+}
 
 .feature-img {
       width: 50px;

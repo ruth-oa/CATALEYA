@@ -13,125 +13,143 @@
 
 </head>
 <body>
-<header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div class="container-fluid">
+  <header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
 
-    <!-- logo -->
-    <a class="navbar-brand" href="index.html">Cataleya</a>
+      <!-- logo -->
+      <a class="navbar-brand" href="index.html">Cataleya</a>
 
-    <!-- hamburguesa -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <form class="d-flex" role="search">
-          <input class="form-control me-2" type="Search" placeholder="Buscar">
+      <!-- contenedor colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <!-- buscador (a la izquierda) -->
+        <form class="d-flex me-auto my-2 my-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
 
-    <!-- contenedor flex para menú + buscador + botones -->
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
+        <!-- menú (centrado) -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="catalogo.html" data-bs-toggle="dropdown">Catálogo</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="catalogo.html">Cumpleaños</a></li>
+              <li><a class="dropdown-item" href="catalogo.html">Graduaciones</a></li>
+              <li><a class="dropdown-item" href="catalogo.html">Eventos especiales</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
 
-      <!-- menu -->
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="catalogo.html" data-bs-toggle="dropdown">Catalogo</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="catalogo.html">Cumpleaños</a></li>
-            <li><a class="dropdown-item" href="catalogo.html">Graduaciones</a></li>
-            <li><a class="dropdown-item" href="catalogo.html">Eventos especiales</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
+        <!-- sign y login (a la derecha) -->
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+          <button class="btn btn-light" id="cart">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
 
-      <!-- sign y login -->
-      <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-light" id="cart" >
-            <span class="material-symbols-outlined">
-         shopping_cart
-            </span>
-        </button>
+          <p id="datos-usuario" class="oculto"></p>
+          <button class="btn btn-secondary shadow oculto" id="btn-logout">
+            Cerrar Sesión
+          </button>
+          <button class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#loginModal" id="btn-open-login">
+            Iniciar Sesión
+          </button>
+        </div>
 
-                    <p id="datos-usuario" class="oculto"></p>
-                    <button class="btn btn-secondary shadow" class="oculto" id="btn-logout">
-                        Cerrar Sesión
-                    </button>
-                    <button class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#loginModal" id="btn-open-login">
-                        Iniciar Sesión
-                    </button>
       </div>
-
     </div>
+  </nav>
+</header>
 
-  </div>
-</nav>
-  </header>
+
 
   <main>
 
-    <!-- Carrusel hero -->
-    <section class="hero">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="imgs/carusel1.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Flores eternas hechas a mano</h2>
-              <p>Diseños únicos para cada ocasión</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="imgs/carusel2.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Calidad y elegancia</h2>
-              <p>Arreglos que duran para siempre</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="imgs/carusel3.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Detalles únicos</h2>
-              <p>Cada pieza con amor y dedicación</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </section>
+<!-- Carrusel hero -->
+<section class="hero">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imgs/carusel1.png" class="d-block w-100" alt="...">
+<div class="carousel-caption custom-caption">
+  <h2>Flores eternas hechas a mano</h2>
+  <p>Diseños únicos para cada ocasión</p>
+  <a href="#catalogo" class="btn btn-primary d-none d-lg-inline-block mt-3">Ver catálogo</a>
+</div>
 
-    <!-- Features -->
-    <section class="features">
-  <div class="container d-flex">
-    <div class="caracteristicas">
-      <span class="material-icons feature-icon">design_services</span>
-      <h5>Personalizados</h5>
-      <p class="small text-muted">Diseños únicos adaptados a ti.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="imgs/carusel2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption custom-caption">
+          <h2>Calidad y elegancia</h2>
+          <p>Arreglos que duran para siempre</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imgs/carusel3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption custom-caption">
+          <h2>Detalles únicos</h2>
+          <p>Cada pieza con amor y dedicación</p>
+        </div>
+      </div>
     </div>
-    <div class="caracteristicas">
-      <span class="material-icons feature-icon">construction</span>
-      <h5>Materiales que duran</h5>
-      <p class="small text-muted">Insumos resistentes y de calidad.</p>
-    </div>
-    <div class="caracteristicas">
-      <span class="material-icons feature-icon">local_shipping</span>
-      <h5>Entrega rápida</h5>
-      <p class="small text-muted">Puntualidad garantizada.</p>
-    </div>
-    <div class="caracteristicas">
-      <span class="material-icons feature-icon">star</span>
-      <h5>Detalles únicos</h5>
-      <p class="small text-muted">Cada pieza con amor.</p>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</section>
+
+
+<!-- Sección Features -->
+<section class="features py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-3">
+        <div class="feature-box">
+          <i class="material-icons">local_florist</i>
+          <h3>Diseños únicos</h3>
+          <p>Cada arreglo está hecho a mano con detalles exclusivos.</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="feature-box">
+          <i class="material-icons">favorite</i>
+          <h3>Para toda ocasión</h3>
+          <p>Flores eternas ideales para regalar o decorar tu espacio.</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="feature-box">
+          <i class="material-icons">local_shipping</i>
+          <h3>Entrega rápida</h3>
+          <p>Recibe tu pedido en pocas horas dentro de la ciudad.</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="feature-box">
+          <i class="material-icons">star</i>
+          <h3>Calidad garantizada</h3>
+          <p>Materiales de primera que aseguran durabilidad.</p>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+
+
 </section>
 
     <!-- About -->
@@ -151,28 +169,26 @@
     </section>
 
 <!-- circulos -->
-       <div class="circulos-container">
-      <div class="circle-card">
-        <img src="imgs/imagencr1.png" alt="Ramo elegante" />
-        <p>Up to 1500$</p>
-      </div>
-      <div class="circle-card">
-        <img src="imgs/imagencr2.png" alt="Ramo elegante" />
-        <p>Up to 1500$</p>
-      </div>
-      <div class="circle-card">
-        <img src="imgs/imagencr3.png" alt="Ramo elegante" />
-        <p>Up to 1500$</p>
-      </div>
-      <div class="circle-card">
-        <img src="imgs/iamgencr4.png" alt="Ramo elegante" />
-        <p>Up to 1500$</p>
-      </div>
-      <div class="circle-card">
-        <img src="imgs/iamgecr5.png" alt="Ramo elegante" />
-        <p>Up to 1500$</p>
-      </div>
-    </div>
+<div class="circulos-container">
+  <div class="circle-card">
+    <img src="imgs/imagencr1.png" alt="Ramo aniversario" />
+    <p class="circle-text">Amor eterno<br><hr>Siempre juntos</p>
+  </div>
+  <div class="circle-card">
+    <img src="imgs/imagencr2.png" alt="Ramo regalo" />
+    <p class="circle-text">Un detalle<br><hr>Con cariño</p>
+  </div>
+  <div class="circle-card">
+    <img src="imgs/imagencr3.png" alt="Ramo decoración" />
+    <p class="circle-text">Tu espacio<br><hr>Con encanto</p>
+  </div>
+  <div class="circle-card">
+    <img src="imgs/iamgencr4.png" alt="Ramo especial" />
+    <p class="circle-text">Pequeño gesto<br><hr>Gran sonrisa</p>
+  </div>
+</div>
+
+
 
     <!-- Testimonios -->
     <section class="testimonials">
