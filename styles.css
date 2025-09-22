@@ -226,7 +226,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el recuadro */
 }
 
-.testimonial-contenedor:nth-child (even) {
+.testimonial-contenedor:nth-child(even) {
   flex-direction: row-reverse; /* Para invertir el orden de la segunda caja */
 }
 
