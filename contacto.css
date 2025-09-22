@@ -161,36 +161,39 @@ input[type=submit]:hover {
 
 #pedidoForm {
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
+
 }
 
 /* Animación coquette al pasar el mouse */
-.pedidoForm:hover {
-  transform: scale(1.01);
+
+#pedidoForm:hover {
+  transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(236, 115, 155, 0.35);
   transition: transform 0.2s ease-in-out;
 }
 
-#pedidoForm::before {
-  top: -14px;
-  left: 18px;
+/* Inputs y selects normales */
+#pedidoForm .form-control,
+#pedidoForm .form-select {
+  border-radius: 12px;
+  border: 2px solid #f3d3e0; /* color base */
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
 
-#pedidoForm::after {
-  bottom: -14px;
-  right: 18px;
+/* Efecto cuando el usuario hace focus (clic o escribe) */
+#pedidoForm .form-control:focus,
+#pedidoForm .form-select:focus {
+  border-color: #e4a2c3; /* rosa fuerte coquette */
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.3); /* luz rosa suave */
+  outline: none; /* elimina el borde azul por defecto */
 }
 
-.pedidoForm {
-    background: repeating-linear-gradient(
-    45deg,             /* ángulo de las líneas */
-    #fcbec2,           /* fucsia */
-    #ff69b4 5px,       /* grosor línea fucsia */
-    #faf5f7 2px,       /* rosa clarísimo */
-    #ffe6f0 10px       /* espacio entre líneas */
-  );
+.realice {
+  color: #000000;
+  margin-top: 4.6rem
 }
+
 
   /* === ESTILO PRO MODALES LOGIN & REGISTER === */
 .modal-content {

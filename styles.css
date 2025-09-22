@@ -153,10 +153,19 @@ body {
 
 .feature-box i {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #e69a00;
   margin-bottom: 10px;
   display: block;
 }
+
+.grupoA { 
+color: #e69a00;
+}
+
+.grupoB {
+  color: #d47575;
+}
+
+
 
 .feature-box h3 {
   font-size: clamp(1rem, 2vw, 1.3rem);
@@ -191,19 +200,26 @@ body {
 /* Muy chico (celulares) */
 @media (max-width: 576px) {
   .features {
-    padding-top: 0rem !important;
-    padding-bottom: 0rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
-  .feature-box i {
-    font-size: 0.8rem;
+
+  /* Ícono más grande */
+  .feature-box i.material-icons {
+    font-size: 2rem; /* o el tamaño que quieras */
   }
+
+  /* Título más pequeño */
   .feature-box h3 {
-    font-size: 0.2rem;
+    font-size: 0.9rem;
   }
+
+  /* Ocultar texto descriptivo */
   .feature-box p {
-    display: none; /* desaparece en celular */
+    display: none;
   }
 }
+
 
 
 
