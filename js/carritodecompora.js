@@ -124,6 +124,7 @@ document.querySelector('.cerrar-carrito').addEventListener('click', () => {
     carritoDiv.style.display = "none";
 });
 
+
 // Obtener todos los botones "Ver más"
 document.querySelectorAll('.ver-mas').forEach((btn, index) => {
   btn.addEventListener('click', () => {
@@ -142,14 +143,34 @@ document.querySelectorAll('.ver-mas').forEach((btn, index) => {
     // Configurar botón "Agregar al carrito" dentro del modal
     const btnAgregar = document.getElementById('modalAgregarCarrito');
     btnAgregar.onclick = () => {
-      const cantidad = parseInt(item.querySelector('.cantidad').textContent);
-      agregarAlCarrito(nombre, parseFloat(precio.replace(/[^\d.]/g, '')), imagen, cantidad);
-      // Opcional: cerrar modal automáticamente
-      const modal = bootstrap.Modal.getInstance(document.getElementById('modalProducto1'));
-      modal.hide();
-    };
+  // 🔒 Validación de login
+  if(!estaLogueado()){
+    // Cerrar el modal del producto
+    const modalProducto = bootstrap.Modal.getInstance(document.getElementById('modalProducto1'));
+    modalProducto.hide();
+
+    // Abrir el modal de login
+    const modalLogin = new bootstrap.Modal(document.getElementById('loginModal'));
+    modalLogin.show();
+    return;
+  }
+
+  const cantidad = parseInt(item.querySelector('.cantidad').textContent);
+  agregarAlCarrito(
+    nombre, 
+    parseFloat(precio.replace(/[^\d.]/g, '')), 
+    imagen, 
+    cantidad
+  );
+
+  // Cerrar modal producto después de agregar
+  const modal = bootstrap.Modal.getInstance(document.getElementById('modalProducto1'));
+  modal.hide();
+};
+
   });
 });
+
 
 // Función que agrega productos al carrito (usa tu lógica existente)
 function agregarAlCarrito(nombre, precio, imagen, cantidad) {

@@ -69,94 +69,120 @@
   </header>
 
 <main class="container my-5" id="contactoxxx">
-  <h1 class=" text-center realice">Realice su pedido</h1>
-  <p class="text-center text-muted fs-6" style="font-style: italic; color: #8B5E83; margin-bottom: 3rem"> 
-  Cada flor eterna es única, hecha a mano para momentos inolvidables.
-</p>
   <div class="row g-4">
-    
-    <!-- Columna formulario -->
-    <div class="col-md-6 pedidoForm">
-       <form id="pedidoForm" class="p-4 rounded shadow" style="background:#fff; border:2px solid #F5E7E7;">
+    <h1 class=" text-center realice">Escribenos</h1>
+        <p class="text-center" style="font-style: italic; color: #8B5E83; margin-bottom: 2rem"> 
+          Cada flor eterna es única, hecha a mano para momentos inolvidables.
+        </p>
+    <!-- Columna formulario de contacto -->
+    <div class="col-md-6">
+      <form id="contactForm" class="p-4 rounded shadow bg-white border needs-validation" 
+            style="border-color:#F5E7E7;" novalidate>
         
+
         <!-- Nombre -->
         <div class="mb-3">
-          <label for="username" class="form-label">Nombre completo <span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="Ej: María López" required>
+          <label for="fullname" class="form-label">Nombre completo <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="fullname" name="fullname" required>
+          <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
         </div>
 
         <!-- Correo -->
         <div class="mb-3">
-          <label for="usermail" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
-          <input type="email" class="form-control" id="usermail" name="usermail" placeholder="ejemplo@correo.com" required>
+          <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" name="email" required>
+          <div class="invalid-feedback">Ingresa un correo válido.</div>
         </div>
 
         <!-- Teléfono -->
         <div class="mb-3">
           <label for="phone" class="form-label">Teléfono / WhatsApp</label>
-          <input type="tel" class="form-control" id="phone" name="phone" placeholder="+51 987 654 321">
+          <input type="tel" class="form-control" id="phone" name="phone" 
+                 pattern="^\+?[0-9\s]{7,15}$" placeholder="+51 987 654 321">
+          <div class="invalid-feedback">Ingresa un número válido (7 a 15 dígitos).</div>
         </div>
 
-        <!-- Tipo de arreglo -->
+        <!-- Asunto -->
         <div class="mb-3">
-          <label for="tipo" class="form-label">Tipo de arreglo <span class="text-danger">*</span></label>
-          <select class="form-select" id="tipo" name="tipo" required>
-            <option value="">Seleccione una opción</option>
-            <option value="cumpleaños">Cumpleaños 🎂</option>
-            <option value="graduación">Graduación 🎓</option>
-            <option value="romántico">Romántico ❤️</option>
-            <option value="especial">Evento especial ✨</option>
-          </select>
+          <label for="subject" class="form-label">Asunto <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="subject" name="subject" required>
+          <div class="invalid-feedback">Escribe el asunto de tu mensaje.</div>
         </div>
 
-        <!-- Cantidad -->
+        <!-- Mensaje -->
         <div class="mb-3">
-          <label for="cantidad" class="form-label">Cantidad</label>
-          <input type="number" min="1" class="form-control" id="cantidad" name="cantidad" value="1">
+          <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
+          <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+          <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
         </div>
 
-        <!-- Fecha de entrega -->
-        <div class="mb-3">
-          <label for="fecha" class="form-label">Fecha de entrega <span class="text-danger">*</span></label>
-          <input type="date" class="form-control" id="fecha" name="fecha" required>
-        </div>
-
-        <!-- Dirección -->
-        <div class="mb-3">
-          <label for="direccion" class="form-label">Dirección de entrega</label>
-          <textarea class="form-control" id="direccion" name="direccion" rows="3" placeholder="Escriba la dirección completa"></textarea>
-        </div>
-
-        <!-- Mensaje personalizado -->
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje personalizado (opcional)</label>
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Ej: Feliz cumpleaños, con mucho cariño ❤️"></textarea>
-        </div>
-
-        <!-- Botones -->
-        <div class="text-center d-flex justify-content-center gap-3">
-          <button type="submit" class="btn btn-primary px-4">Enviar pedido</button>
-          <!-- Botón que abre el modal -->
-          <button type="button" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#pedidoPersonalizadoModal">
-            Realizar pedido personalizado
-          </button>
+        <!-- Botón -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-4">Enviar mensaje</button>
         </div>
       </form>
     </div>
 
-    <!-- Columna mapa -->
+    <!-- Columna mapa y datos del formulario -->
     <div class="col-md-6">
+      <!-- Mapa -->
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.205659243984!2d-77.0368706848857!3d-12.046373891384105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f0e6db12e3%3A0x7a7b9c33df3f8b7c!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1ses!2spe!4v1692345678901!5m2!1ses!2spe" 
-        width="100%" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
+
+      <!-- Datos recogidos -->
+      <div id="formResult" class="d-none mt-4 p-3 bg-light border rounded shadow-sm">
+        <h5 class="text-success fw-bold">✅ Te contactaremos pronto</h5>
+        <p><strong>Nombre:</strong> <span id="resName"></span></p>
+        <p><strong>Correo:</strong> <span id="resEmail"></span></p>
+        <p><strong>Teléfono:</strong> <span id="resPhone"></span></p>
+        <p><strong>Asunto:</strong> <span id="resSubject"></span></p>
+        <p><strong>Mensaje:</strong> <span id="resMessage"></span></p>
+        <div class="text-end">
+          <button id="cancelBtn" class="btn btn-outline-danger btn-sm">Cancelar consulta</button>
+        </div>
+      </div>
     </div>
   </div>
+</main>
+
+
+<!-- Script de validación y mostrar resultados -->
+<script>
+(() => {
+  'use strict'
+  const form = document.getElementById('contactForm');
+  const resultBox = document.getElementById('formResult');
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
+
+    // Mostrar datos en el flexbox
+    document.getElementById('resName').textContent = form.fullname.value;
+    document.getElementById('resEmail').textContent = form.email.value;
+    document.getElementById('resPhone').textContent = form.phone.value || "No proporcionado";
+    document.getElementById('resSubject').textContent = form.subject.value;
+    document.getElementById('resMessage').textContent = form.message.value;
+
+    resultBox.classList.remove('d-none');
+    form.reset();
+    form.classList.remove('was-validated');
+  });
+
+  // Botón cancelar consulta
+  document.getElementById('cancelBtn').addEventListener('click', () => {
+    resultBox.classList.add('d-none');
+  });
+})();
+</script>
+
 </main>
 
 <!-- Modal Pedido Personalizado -->
