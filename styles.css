@@ -426,3 +426,80 @@ color: #e69a00;
   from { opacity: 0; transform: scale(0.9);}
   to   { opacity: 1; transform: scale(1);}
 }
+
+.testimonios-seccion {
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* Color de fondo similar al de la imagen */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Espacio entre los testimonios */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Espacio entre el texto y la imagen */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el recuadro */
+}
+
+.testimonial-contenedor:nth-child(even) {
+  flex-direction: row-reverse; /* Para invertir el orden de la segunda caja */
+}
+
+.testimonial-contenido {
+  flex: 1;
+}
+
+.testimonial-imagen {
+  flex: 1;
+  max-width: 45%; /* Ancho de la imagen */
+  text-align: center;
+}
+
+.testimonial-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.comillas {
+  font-size: 4em; /* Tamaño grande para las comillas */
+  color: #c0c0c0; /* Color gris suave */
+  font-family: serif;
+  margin-bottom: -20px;
+  line-height: 0.5;
+}
+
+.testimonial-texto {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* Fuente similar a la de la imagen */
+}
+.bg-rose {
+  background-color: #f0dedf; /* rosado pastel */
+}
+
+.pink {
+  background-color: #e0c9cb;
+}
+
+#banner-nosotros {
+    background: 
+    linear-gradient(rgba(228, 178, 186, 0.37), rgba(255, 255, 255, 0.466)),
+    url("/imgs/nosotros banner.png") center/cover no-repeat;
+  background-position: center;   /* centra la imagen */
+  background-repeat: no-repeat;  /* evita que se repita */
+  background-size: cover;        /* que cubra todo el contenedor sin deformarse */
+  height: 300px;                 /* ajusta la altura del banner */
+  display: flex;                 /* opcional: para centrar el texto */
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);                  /* texto visible si la imagen es oscura */
+}
