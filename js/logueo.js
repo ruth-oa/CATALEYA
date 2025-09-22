@@ -51,3 +51,67 @@ function actualizarInterfaz() {
 }
 // Llamar a la función para actualizar la interfaz al cargar la página
 document.addEventListener("DOMContentLoaded", actualizarInterfaz);
+
+////// REGISTRO
+
+//registar usuario
+document.getElementById("btn-register").addEventListener("click", function() {
+    let nuevoUsuario = {
+        nombre: document.getElementById("registerName").value,
+        email: document.getElementById("registerEmail").value,
+        password: document.getElementById("registerPassword").value
+    };
+    const userconfirm = document.getElementById("confirmPassword").value;
+    
+    //Valiar de las contraseñas sean iguales
+    if (nuevoUsuario.password !== userconfirm) {
+        alert("Las contraseñas no coinciden.");
+        return;
+    }
+
+    // Obtener la lista de usuarios del almacenamiento local (localStorage) o inicializar un array vacío si no existe
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Agregar el nuevo usuario a la lista
+    usuarios.push(nuevoUsuario);
+    
+    // Guardar el nuevo usuario en el almacenamiento local (localStorage)
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    alert("Bienvenido, " + nuevoUsuario.nombre + "!");
+
+    // Limpiar los campos del formulario
+    document.getElementById("registerName").value = "";
+    document.getElementById("registerEmail").value = "";
+    document.getElementById("registerPassword").value = "";
+    document.getElementById("confirmPassword").value = "";
+
+    // Cerrar el modal de registro y abrir el de login
+    registerModal.hide();
+    loginModal.show();
+}); 
+
+
+///// GENERAL
+
+// Obtener los elementos de los botones y los modales
+const btnOpenRegister = document.getElementById("btn-open-register");
+const btnBackToLogin = document.getElementById("btn-back-to-login");
+
+const loginModalElement = document.getElementById("loginModal");
+const registerModalElement = document.getElementById("registerModal");
+
+// Inicializar los modales de Bootstrap
+const loginModal = new bootstrap.Modal(loginModalElement);
+const registerModal = new bootstrap.Modal(registerModalElement);
+
+// Evento para abrir el modal de registro y cerrar el de login
+btnOpenRegister.addEventListener("click", () => {
+  loginModal.hide(); // Oculta el modal de login
+  registerModal.show(); // Muestra el modal de registro
+});
+
+// Evento para regresar al modal de login desde el de registro
+btnBackToLogin.addEventListener("click", () => {
+  registerModal.hide(); // Oculta el modal de registro
+  loginModal.show(); // Muestra el modal de login
+});
